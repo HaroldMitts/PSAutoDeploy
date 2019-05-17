@@ -13,6 +13,7 @@
 		WinPE-Scripting
 		WinPE-NetFx
 		WinPE-PowerShell
+		WinPE-DismCmdlets
 	Example commands to add the above required Optional Components
 	https://github.com/HaroldMitts/Offline-DI/blob/master/Add%20Optional%20Components%20to%20WinPE%20-%20Example.txt
 
