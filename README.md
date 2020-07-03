@@ -42,7 +42,9 @@ Download the USB-B content from this Microsoft website and expand to your Deploy
 * `Walkthrough-Deploy.bat` - batch file used to detect PC firmware type (UEFI or BIOS) and accept image file name to use for image deployment
 
 ### Device Driver Repository
-Copy INF device drivers to the distribution share into sub-folders named after the BIOS values as determined by WMIC. The folder should contain a folder for each device driver, separated into sub-folders based on the device name. To determine the required folder names where you will save the drivers, see this page for details and examples; https://github.com/HaroldMitts/PSAutoDeploy/wiki/Get-WMI-values
+Copy INF device drivers to the distribution share into sub-folders named after the BIOS values as determined by WMIC. The folder should contain a folder for each device driver, separated into sub-folders based on the device names. 
+
+> ** Note**: DISM /Export-drivers command will automatically name the sub-folders for each driver when extracting them, so you only need to create the Manufacturer, Model, and OS architecture folders.
 
 32-bit Driver Example;
 
@@ -58,6 +60,23 @@ etc... for each device in the PC needing drivers you wish to include
 * Z:\Share\Drivers\Lenovo\G40\64-bit\igdlh64
 
 etc... for each device in the PC needing drivers you wish to include
+
+## Determine WMI Values for each Device
+In order to setup driver files in the correct folder names, so that PSAutoDeploy.ps1 or other scripts like the driver injection script can find them, you need to run a few commands to see what the device manufacturer has entered into the BIOS or UEFI tables, for each device. This can be done rather easily using WMIC, from within a running Windows installation by running the following commands;
+
+This page has a command script which will determine the values using WMIC. 
+https://github.com/HaroldMitts/Offline-DI/blob/master/BIOS-Values.cmd
+
+The following are PowerShell commands you can use to determine the values for manufacturer, model, and OS architecture;
+
+`$SysManufacturer = (Get-WmiObject -Class:Win32_ComputerSystem).Manufacturer; Write-Host "PC Manufacturer: " -NoNewline; Write-Host "$SysManufacturer"`
+
+`$SysModel = (Get-WmiObject -Class:Win32_ComputerSystem).Model; Write-Host "PC Model: " -NoNewline; Write-Host "$SysModel"`
+
+`$OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture; Write-Host "OS Architecture: " -NoNewline; Write-Host "$OSArch"`
+
+
+Alternatively, you can also run these same commands from within WinPE, but the WinPE will need to have the optional components added so that it supports running WMI queries. More details and example script can be found here: https://github.com/HaroldMitts/Build-CustomPE
 
 ## Demo
 [Video Demo on YouTube](https://youtu.be/PMnPsvOI_jU)
