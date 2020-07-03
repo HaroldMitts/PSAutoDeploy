@@ -31,9 +31,9 @@ DISM /Export-Image /SourceImageFile:"C:\TMP\install.wim" /SourceIndex:6 /Destina
 For more details, see this Microsoft guide: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/system-builder-deployment-of-windows-10-for-desktop-editions
 
 Deployment resources from the USB-B download should be saved to a network share with sub-folder named Deployment
-Download the USB-B content from this Microsoft website and expand to your Deployment Share: http://aka.ms/usb-b
+Download the [USB-B](https://go.microsoft.com/fwlink/?linkid=872894) content from this Microsoft website and expand to your Deployment Share.
 
-`Z:\Share\Deployment` contains the following files from the http://aka.ms/usb-b download;
+`Z:\Share\Deployment` contains the following files from the USB-B download;
 * `ApplyImage.bat` - batch file used to apply image files to hard disk
 * `CreatePartitions-BIOS.txt` - Text file used by ApplyImage.bat and Diskpart to setup BIOS disk partitions
 * `CreatePartitions-UEFI.txt` - Text file used by ApplyImage.bat and Diskpart to setup UEFI disk partitions
@@ -86,3 +86,10 @@ $OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture; Write-Host "OS A
 ## Production Use Demo
 [Video Demo on YouTube](https://youtu.be/PMnPsvOI_jU)
 This demo shows a device booting from Windows Deployment Services, installing Windows using WinPE, and the Driver Injection solution described in this repository.
+
+## Related Resources
+[Microsoft Manufacturing Guidance](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/index)
+
+[Microsoft Cumulative Updates](http://www.catalog.update.microsoft.com/Search.aspx?q=windows%2010%20cumulative%20update)
+
+[USB-B Sample Scripts](https://go.microsoft.com/fwlink/?linkid=872894)
