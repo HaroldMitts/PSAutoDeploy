@@ -18,9 +18,15 @@ Example; `Z:\Share\Images\x64\Install.wim`
 
 The Install.wim must be a single-indexed image. To create a single-indexed image from the base OPK install.wim, use the DISM /Export-Image command. 
 
-32-bit Example; `DISM /Export-Image /SourceImageFile:"C:\TMP\install.wim" /SourceIndex:6 /DestinationImageFile:"Z:\Share\Images\x86\Install.wim"`
+32-bit Example; 
+````
+DISM /Export-Image /SourceImageFile:"C:\TMP\install.wim" /SourceIndex:6 /DestinationImageFile:"Z:\Share\Images\x86\Install.wim"
+````
 
-64-bit Example;	`DISM /Export-Image /SourceImageFile:"C:\TMP\install.wim" /SourceIndex:6 /DestinationImageFile:"Z:\Share\Images\x64\Install.wim"`
+64-bit Example;	
+```` 
+DISM /Export-Image /SourceImageFile:"C:\TMP\install.wim" /SourceIndex:6 /DestinationImageFile:"Z:\Share\Images\x64\Install.wim"
+````
 
 For more details, see this Microsoft guide: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/system-builder-deployment-of-windows-10-for-desktop-editions
 
