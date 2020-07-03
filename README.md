@@ -81,7 +81,7 @@ Get the Value for OS Architecture using PowerShell
 $OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture; Write-Host "OS Architecture: " -NoNewline; Write-Host "$OSArch"
 ````
 
-> ** Note**: You can also run these same commands from within WinPE, but the WinPE will need to have the optional components added so that it supports running PowerShell and WMI queries. More details and example script can be found here: https://github.com/HaroldMitts/Build-CustomPE
+> Note: You can also run these same commands from within WinPE, but the WinPE will need to have the optional components added so that it supports running PowerShell and WMI queries. More details and example script can be found here: https://github.com/HaroldMitts/Build-CustomPE
 
 ## Production Use Demo
 [Video Demo on YouTube](https://youtu.be/PMnPsvOI_jU)
