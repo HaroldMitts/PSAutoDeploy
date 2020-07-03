@@ -31,7 +31,7 @@ DISM /Export-Image /SourceImageFile:"C:\TMP\install.wim" /SourceIndex:6 /Destina
 For more details, see this Microsoft guide: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/system-builder-deployment-of-windows-10-for-desktop-editions
 
 Deployment resources from the USB-B download should be saved to a network share with sub-folder named Deployment
-Download the [USB-B](https://go.microsoft.com/fwlink/?linkid=872894) content from this Microsoft website and expand to your Deployment Share.
+Download the [USB-B content from this Microsoft website](https://go.microsoft.com/fwlink/?linkid=872894) and expand to your Deployment Share.
 
 `Z:\Share\Deployment` contains the following files from the USB-B download;
 * `ApplyImage.bat` - batch file used to apply image files to hard disk
