@@ -69,14 +69,23 @@ https://github.com/HaroldMitts/Offline-DI/blob/master/BIOS-Values.cmd
 
 The following are PowerShell commands you can use to determine the values for manufacturer, model, and OS architecture;
 
-`$SysManufacturer = (Get-WmiObject -Class:Win32_ComputerSystem).Manufacturer; Write-Host "PC Manufacturer: " -NoNewline; Write-Host "$SysManufacturer"`
+Get the BIOS Value for System Manufacturer using PowerShell
+````
+$SysManufacturer = (Get-WmiObject -Class:Win32_ComputerSystem).Manufacturer; Write-Host "PC Manufacturer: " -NoNewline; Write-Host "$SysManufacturer"`
+````
 
-`$SysModel = (Get-WmiObject -Class:Win32_ComputerSystem).Model; Write-Host "PC Model: " -NoNewline; Write-Host "$SysModel"`
+Get the BIOS Value for System Model using PowerShell
+````
+$SysModel = (Get-WmiObject -Class:Win32_ComputerSystem).Model; Write-Host "PC Model: " -NoNewline; Write-Host "$SysModel"
+````
 
-`$OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture; Write-Host "OS Architecture: " -NoNewline; Write-Host "$OSArch"`
+Get the Value for OS Architecture using PowerShell
+````
+$OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture; Write-Host "OS Architecture: " -NoNewline; Write-Host "$OSArch"
+````
 
+> ** Note**: You can also run these same commands from within WinPE, but the WinPE will need to have the optional components added so that it supports running PowerShell and WMI queries. More details and example script can be found here: https://github.com/HaroldMitts/Build-CustomPE
 
-Alternatively, you can also run these same commands from within WinPE, but the WinPE will need to have the optional components added so that it supports running WMI queries. More details and example script can be found here: https://github.com/HaroldMitts/Build-CustomPE
-
-## Demo
+## Production Use Demo
 [Video Demo on YouTube](https://youtu.be/PMnPsvOI_jU)
+This demo shows a device booting from Windows Deployment Services, installing Windows using WinPE, and the Driver Injection solution described in this repository.
