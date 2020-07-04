@@ -98,7 +98,7 @@ if ($FirmwareType -eq 2)
 #endregion
 #region Apply image
 Write-Host -ForegroundColor green "Step 2 - Applying Image"
-MKDIR W:\Scratchdir
+New-Item -Path W:\ -Name Scratchdir -ItemType Directory 
 
 if ($OSArch -eq "64-bit")
 {
@@ -115,7 +115,8 @@ Write-Host -ForegroundColor green "Step 3 - Configure System Files using BCDBoot
 Invoke-Command -ScriptBlock { W:\Windows\System32\bcdboot W:\Windows /s S: }
 Write-Output ""
 Write-Host -ForegroundColor green "Step 4 - Configure and Hide Recovery Partition"
-MKDIR R:\Recovery\WindowsRE
+New-Item -Path R:\ -Name Recovery\WindowsRE -ItemType Directory 
+
 Invoke-Command -ScriptBlock { XCopy /h W:\Windows\System32\Recovery\Winre.wim R:\Recovery\WindowsRE\ }
 Invoke-Command -ScriptBlock { W:\Windows\System32\Reagentc /Setreimage /Path R:\Recovery\WindowsRE /Target W:\Windows }
 Invoke-Command -ScriptBlock { W:\Windows\System32\Reagentc /info /Target W:\Windows }
