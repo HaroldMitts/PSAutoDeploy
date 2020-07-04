@@ -6,11 +6,11 @@ PSAutoDeploy is a PowerShell script used to build a simple deployment solution f
 
 Requires the following WinPE optional components;
 
-* WinPE-WMI
-* WinPE-Scripting
-* WinPE-NetFx
-* WinPE-PowerShell
-* WinPE-DismCmdlets
+    * WinPE-WMI
+    * WinPE-Scripting
+    * WinPE-NetFx
+    * WinPE-PowerShell
+    * WinPE-DismCmdlets
 
 [Example commands to add the above required Optional Components](https://github.com/HaroldMitts/Build-CustomPE).
 
