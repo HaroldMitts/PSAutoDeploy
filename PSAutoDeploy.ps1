@@ -4,7 +4,7 @@
 	 Created on:   	7/03/2020
 	 Created by:   	Harold Mitts
 	 Filename:     	PSAutoDeploy.ps1
-	 Version:       2.0
+	 Version: 		2.0
 	===========================================================================
 #>
 #region WMI Queries set to varialbles

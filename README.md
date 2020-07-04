@@ -75,7 +75,3 @@ This demo shows a virtual machine booting from Windows PE, installing Windows 10
 ## Related Resources
 
 [Microsoft Manufacturing Guidance](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/index)
-
-[Microsoft Cumulative Updates](http://www.catalog.update.microsoft.com/Search.aspx?q=windows%2010%20cumulative%20update)
-
-[USB-B Sample Scripts](https://go.microsoft.com/fwlink/?linkid=872894)
