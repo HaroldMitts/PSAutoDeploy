@@ -14,18 +14,20 @@ $OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture
 #endregion
 #region OS Selection
 $WinVer = Read-Host "Type (1) for Pro or (2) for Home"
+Write-Host ""
 
     If ($WinVer -eq 1)
         {
-            Write-Host "Loading Windows 10 Pro" 
+            Write-Host -ForegroundColor Green "Loading Windows 10 Pro" 
             $OSIndex = 6
         } 
             ELSE 
         {
-        Write-Host "Loading Windows 10 Home" 
+        Write-Host -ForegroundColor Green "Loading Windows 10 Home" 
             $OSIndex = 1
         }
 
+Write-Host ""
 Write-Output "Deploying Windows image and drivers based on the following device variables"
 Write-Output ""
     Write-Host -ForegroundColor Yellow "PC Manufacturer: " -NoNewline; Write-Host -ForegroundColor Red "$SysManufacturer"
