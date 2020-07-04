@@ -46,21 +46,21 @@ In order to setup driver files in the correct folder names, so that PSAutoDeploy
 
 Get the BIOS Value for System Manufacturer using PowerShell
 
-    ```powershell
+```powershell
     $SysManufacturer = (Get-WmiObject -Class:Win32_ComputerSystem).Manufacturer; Write-Host "PC Manufacturer: " -NoNewline; Write-Host "$SysManufacturer"`
-    ```
+```
 
 Get the BIOS Value for System Model using PowerShell
 
-    ```powershell
-    $SysModel = (Get-WmiObject -Class:Win32_ComputerSystem).Model; Write-Host "PC Model: " -NoNewline; Write-Host "$SysModel"
-    ```
+```powershell
+$SysModel = (Get-WmiObject -Class:Win32_ComputerSystem).Model; Write-Host "PC Model: " -NoNewline; Write-Host "$SysModel"
+```
 
 Get the Value for OS Architecture using PowerShell
 
-    ```powershell
-    $OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture; Write-Host "OS Architecture: " -NoNewline; Write-Host "$OSArch"
-    ```
+```powershell
+$OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture; Write-Host "OS Architecture: " -NoNewline; Write-Host "$OSArch"
+```
 
 > Note: You can also run these same commands from within WinPE, but the WinPE will need to have the optional components added so that it supports running PowerShell and WMI queries. More details and example script can be found here: [https://github.com/HaroldMitts/Build-CustomPE](https://github.com/HaroldMitts/Build-CustomPE)
 
