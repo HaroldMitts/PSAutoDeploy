@@ -42,9 +42,7 @@ Copy INF device drivers to the distribution share into sub-folders named after t
 
 ## Determine WMI Values for each Device
 
-In order to setup driver files in the correct folder names, so that PSAutoDeploy.ps1 or other scripts like the driver injection script can find them, you need to run a few commands to see what the device manufacturer has entered into the BIOS or UEFI tables, for each device. This can be done rather easily using WMIC, from within a running Windows installation by running the following commands;
-
-The following are PowerShell commands you can use to determine the values for manufacturer, model, and OS architecture;
+In order to setup driver files in the correct folder names, so that PSAutoDeploy.ps1 or other scripts like the driver injection script can find them, you need to run a few commands to see what the device manufacturer has entered into the BIOS or UEFI tables, for each device. This can be done rather easily using PowerShell and WMIC from within a running Windows installation by running the following commands;
 
 Get the BIOS Value for System Manufacturer using PowerShell
 
