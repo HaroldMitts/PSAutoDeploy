@@ -47,7 +47,7 @@ In order to setup driver files in the correct folder names, so that PSAutoDeploy
 Get the BIOS Value for System Manufacturer using PowerShell
 
 ```powershell
-    $SysManufacturer = (Get-WmiObject -Class:Win32_ComputerSystem).Manufacturer; Write-Host "PC Manufacturer: " -NoNewline; Write-Host "$SysManufacturer"`
+$SysManufacturer = (Get-WmiObject -Class:Win32_ComputerSystem).Manufacturer; Write-Host "PC Manufacturer: " -NoNewline; Write-Host "$SysManufacturer"`
 ```
 
 Get the BIOS Value for System Model using PowerShell
