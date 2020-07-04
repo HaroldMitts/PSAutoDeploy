@@ -26,19 +26,19 @@ Copy INF device drivers to the distribution share into sub-folders named after t
 
 32-bit Driver Example;
 
-* Z:\Share\Drivers\Lenovo\G40\32-bit\
-* Z:\Share\Drivers\Lenovo\G40\32-bit\intelaud
-* Z:\Share\Drivers\Lenovo\G40\32-bit\igdlh32
+    Z:\Share\Drivers\Lenovo\G40\32-bit\
+    Z:\Share\Drivers\Lenovo\G40\32-bit\intelaud
+    Z:\Share\Drivers\Lenovo\G40\32-bit\igdlh32
 
-etc... for each device in the PC needing drivers you wish to include
+    etc... for each device in the PC needing drivers you wish to include
 
 64-bit Driver Example;
 
-* Z:\Share\Drivers\Lenovo\G40\64-bit\
-* Z:\Share\Drivers\Lenovo\G40\64-bit\intelaud
-* Z:\Share\Drivers\Lenovo\G40\64-bit\igdlh64
+    Z:\Share\Drivers\Lenovo\G40\64-bit\
+    Z:\Share\Drivers\Lenovo\G40\64-bit\intelaud
+    Z:\Share\Drivers\Lenovo\G40\64-bit\igdlh64
 
-etc... for each device in the PC needing drivers you wish to include
+    etc... for each device in the PC needing drivers you wish to include
 
 ## Determine WMI Values for each Device
 
