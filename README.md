@@ -48,21 +48,22 @@ The following are PowerShell commands you can use to determine the values for ma
 
 Get the BIOS Value for System Manufacturer using PowerShell
 
-````powershell
+```powershell
 $SysManufacturer = (Get-WmiObject -Class:Win32_ComputerSystem).Manufacturer; Write-Host "PC Manufacturer: " -NoNewline; Write-Host "$SysManufacturer"`
-````
+```
 
 Get the BIOS Value for System Model using PowerShell
 
-````powershell
+```powershell
 $SysModel = (Get-WmiObject -Class:Win32_ComputerSystem).Model; Write-Host "PC Model: " -NoNewline; Write-Host "$SysModel"
-````
+```
 
 Get the Value for OS Architecture using PowerShell
 
-````powershell
+```powershell
 $OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture; Write-Host "OS Architecture: " -NoNewline; Write-Host "$OSArch"
-````
+```
+
 
 > Note: You can also run these same commands from within WinPE, but the WinPE will need to have the optional components added so that it supports running PowerShell and WMI queries. More details and example script can be found here: [https://github.com/HaroldMitts/Build-CustomPE](https://github.com/HaroldMitts/Build-CustomPE)
 
@@ -71,8 +72,6 @@ $OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture; Write-Host "OS A
 [Video Demo on YouTube](https://youtu.be/fvQIX2seKTQ)
 
 This demo shows a virtual machone booting from Windows PE, installing Windows 10 using PSAutoDeploy.ps1, and the Driver Injection solution as described in this repository.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fvQIX2seKTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Related Resources
 
