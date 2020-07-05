@@ -4,7 +4,7 @@ PSAutoDeploy is a PowerShell script used to build a simple deployment solution f
 
 ## Requirements
 
-Requires the following WinPE optional components;
+Use DISM to add the following WinPE optional components;
 
     WinPE-WMI
     WinPE-Scripting
@@ -12,9 +12,9 @@ Requires the following WinPE optional components;
     WinPE-PowerShell
     WinPE-DismCmdlets
 
-[Example commands to add the above required Optional Components](https://github.com/HaroldMitts/Build-CustomPE).
+[DISM commands to add the above required Optional Components](https://github.com/HaroldMitts/Build-CustomPE).
 
-Save the Windows 10 image to the deployment share. The file should be named install.wim or you will need to modify the PowerShell script to match the image name.
+Save the Windows 10 image to the deployment share. The image should be named install.wim or you will need to modify the PowerShell script to match your image name.
 
 Example; `Z:\Share\Images\x64\Install.wim`
 
