@@ -70,6 +70,8 @@ $OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture; Write-Host "OS A
 
 This demo shows a virtual machine booting from Windows PE, installing Windows 10 using PSAutoDeploy.ps1, and the Driver Injection solution as described in this repository.
 
+![Production Process Flow](https://github.com/HaroldMitts/wininstall/blob/master/img/process-flow.png)
+
 ## Related Resources
 
 [Microsoft Manufacturing Guidance](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/index)
