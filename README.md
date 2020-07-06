@@ -40,8 +40,6 @@ Copy INF device drivers to the distribution share into sub-folders named after t
 
     etc... for each device in the PC needing drivers you wish to include
 
-![Production Process Flow](https://github.com/HaroldMitts/PSAutoDeploy/blob/master/img/pre-production-flow.png)
-
 ## Determine WMI Values for each Device
 
 In order to setup driver files in the correct folder names, so that PSAutoDeploy.ps1 or other scripts like the driver injection script can find them, you need to run a few commands to see what the device manufacturer has entered into the BIOS or UEFI tables, for each device. This can be done rather easily using PowerShell and WMIC from within a running Windows installation by running the following commands;
@@ -71,8 +69,6 @@ $OSArch = (Get-WmiObject Win32_OperatingSystem).OSArchitecture; Write-Host "OS A
 [Video Demo on YouTube](https://youtu.be/fvQIX2seKTQ)
 
 This demo shows a virtual machine booting from Windows PE, installing Windows 10 using PSAutoDeploy.ps1, and the Driver Injection solution as described in this repository.
-
-![Production Process Flow](https://github.com/HaroldMitts/PSAutoDeploy/blob/master/img/process-flow.png)
 
 ## Related Resources
 
