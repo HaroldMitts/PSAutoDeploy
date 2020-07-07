@@ -73,3 +73,5 @@ This demo shows a virtual machine booting from Windows PE, installing Windows 10
 ## Related Resources
 
 [Microsoft Manufacturing Guidance](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/index)
+
+[Windows ADK Download](https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install)
