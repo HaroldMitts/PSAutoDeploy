@@ -1,5 +1,9 @@
 # PSAutoDeploy
 
+## Status: No longer maintained
+
+This project is no longer actively maintained and is provided as-is, with no updates, compatibility fixes, or support. Its scripts target legacy Windows 10 deployment workflows and may not work with current Windows or Windows Assessment and Deployment Kit (ADK) releases. Before production use, verify all guidance and requirements against current Microsoft documentation.
+
 PSAutoDeploy is a PowerShell script used to build a simple deployment solution for Windows 10. The real benefit of this script is the driver injection process, which occurs after the Windows deployment, so that you can use a single generic image and leverage a driver repository, instead of having different images just due to device driver differences. With Windows 10 releasing twice per year, managing many model-specific images may not be the most efficient method of deployment.
 
 ## Requirements
